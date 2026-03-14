@@ -1,6 +1,8 @@
+import React from 'react';
 import { Star, Users, Flame } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import spaceWarImg from '../assets/space-war.png';
+import onlineFootballImg from '../assets/online-football.png';
 
 const games = [
   {
@@ -15,7 +17,7 @@ const games = [
     id: 2,
     titleKey: "games.online_football",
     categoryKey: "games.categories.sports",
-    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
+    image: onlineFootballImg,
     rating: 4.8,
     players: "285K"
   },
