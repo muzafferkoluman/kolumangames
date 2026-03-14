@@ -1,0 +1,89 @@
+import React from 'react';
+import { Star, Users, Flame } from 'lucide-react';
+
+const games = [
+  {
+    id: 1,
+    title: "Neon Cyber Runner",
+    category: "Action",
+    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
+    rating: 4.9,
+    players: "125K"
+  },
+  {
+    id: 2,
+    title: "Quantum Chess",
+    category: "Strategy",
+    image: "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?q=80&w=2070&auto=format&fit=crop",
+    rating: 4.8,
+    players: "89K"
+  },
+  {
+    id: 3,
+    title: "Astro Racers Pro",
+    category: "Racing",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop",
+    rating: 4.7,
+    players: "210K"
+  }
+];
+
+const FeaturedGames: React.FC = () => {
+  return (
+    <section className="container" style={{ padding: '4rem 2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3rem' }}>
+        <div>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <Flame color="var(--secondary)" fill="var(--secondary)" /> 
+            Trending <span className="text-gradient">Games</span>
+          </h2>
+          <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>The most played games on Koluman Games this week.</p>
+        </div>
+        <button className="btn btn-secondary">View All</button>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem' }}>
+        {games.map((game) => (
+          <div key={game.id} className="glass glass-card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ height: '220px', position: 'relative', overflow: 'hidden' }}>
+              <img 
+                src={game.image} 
+                alt={game.title} 
+                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                className="game-img"
+              />
+              <div style={{ position: 'absolute', top: '1rem', left: '1rem', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', padding: '0.25rem 0.75rem', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary)' }}>
+                {game.category}
+              </div>
+            </div>
+            
+            <div style={{ padding: '1.5rem' }}>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>{game.title}</h3>
+              
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                  <Star size={16} color="#FFD700" fill="#FFD700" />
+                  <span style={{ color: '#fff', fontWeight: 600 }}>{game.rating}</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                  <Users size={16} />
+                  <span>{game.players} Active</span>
+                </div>
+              </div>
+              
+              <button className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>Play Now</button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <style>{`
+        .glass-card:hover .game-img {
+          transform: scale(1.05);
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default FeaturedGames;
