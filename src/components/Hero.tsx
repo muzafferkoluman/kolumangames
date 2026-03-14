@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
@@ -41,16 +41,6 @@ const Hero: React.FC = () => {
       <p className="animate-fade-in" style={{ fontSize: '1.25rem', color: 'var(--text-muted)', maxWidth: '600px', marginBottom: '2.5rem', animationDelay: '0.2s', opacity: 0, animationFillMode: 'forwards' }}>
         {t('hero.subtitle')}
       </p>
-
-      <div className="animate-fade-in" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', animationDelay: '0.4s', opacity: 0, animationFillMode: 'forwards' }}>
-        <button className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-          <Play fill="currentColor" size={20} />
-          {t('hero.playNow')}
-        </button>
-        <button className="btn btn-secondary" style={{ padding: '1rem 2rem', fontSize: '1.125rem' }}>
-          {t('hero.exploreCatalog')}
-        </button>
-      </div>
 
     </section>
   );

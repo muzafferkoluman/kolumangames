@@ -27,6 +27,19 @@ const en = {
       active: "Active",
       playNow: "Play Now"
     },
+    games: {
+      space_war: "Space War",
+      online_football: "Online Football",
+      neon_runner: "Neon Cyber Runner",
+      quantum_chess: "Quantum Chess",
+      astro_racers: "Astro Racers Pro",
+      categories: {
+        action: "Action",
+        strategy: "Strategy",
+        puzzle: "Puzzle",
+        sports: "Sports"
+      }
+    },
     footer: {
       copyright: "© {{year}} Koluman Games. All rights reserved."
     }
@@ -58,6 +71,19 @@ const tr = {
       viewAll: "Tümünü Gör",
       active: "Aktif",
       playNow: "Hemen Oyna"
+    },
+    games: {
+      space_war: "Uzay Savaşı",
+      online_football: "Online Futbol",
+      neon_runner: "Neon Cyber Runner",
+      quantum_chess: "Kuantum Satranç",
+      astro_racers: "Astro Yarışçıları",
+      categories: {
+        action: "Aksiyon",
+        strategy: "Strateji",
+        puzzle: "Bulmaca",
+        sports: "Spor"
+      }
     },
     footer: {
       copyright: "© {{year}} Koluman Games. Tüm hakları saklıdır."
@@ -91,6 +117,19 @@ const sv = {
       active: "Aktiva",
       playNow: "Spela Nu"
     },
+    games: {
+      space_war: "Rymdkrig",
+      online_football: "Online Fotboll",
+      neon_runner: "Neon Cyber Runner",
+      quantum_chess: "Kvantschack",
+      astro_racers: "Astro Racers Pro",
+      categories: {
+        action: "Action",
+        strategy: "Strategi",
+        puzzle: "Pussel",
+        sports: "Sport"
+      }
+    },
     footer: {
       copyright: "© {{year}} Koluman Games. Alla rättigheter förbehållna."
     }
@@ -122,6 +161,19 @@ const de = {
       viewAll: "Alle Ansehen",
       active: "Aktiv",
       playNow: "Jetzt Spielen"
+    },
+    games: {
+      space_war: "Weltraumkrieg",
+      online_football: "Online-Fußball",
+      neon_runner: "Neon Cyber Runner",
+      quantum_chess: "Quantenschach",
+      astro_racers: "Astro Racers Pro",
+      categories: {
+        action: "Action",
+        strategy: "Strategie",
+        puzzle: "Rätsel",
+        sports: "Sport"
+      }
     },
     footer: {
       copyright: "© {{year}} Koluman Games. Alle Rechte vorbehalten."

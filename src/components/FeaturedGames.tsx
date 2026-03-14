@@ -5,27 +5,35 @@ import { useTranslation } from 'react-i18next';
 const games = [
   {
     id: 1,
-    title: "Neon Cyber Runner",
-    category: "Action",
+    titleKey: "games.space_war",
+    categoryKey: "games.categories.action",
+    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?q=80&w=2074&auto=format&fit=crop",
+    rating: 4.9,
+    players: "142K"
+  },
+  {
+    id: 2,
+    titleKey: "games.online_football",
+    categoryKey: "games.categories.sports",
+    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
+    rating: 4.8,
+    players: "285K"
+  },
+  {
+    id: 3,
+    titleKey: "games.neon_runner",
+    categoryKey: "games.categories.action",
     image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
     rating: 4.9,
     players: "125K"
   },
   {
-    id: 2,
-    title: "Quantum Chess",
-    category: "Strategy",
+    id: 4,
+    titleKey: "games.quantum_chess",
+    categoryKey: "games.categories.strategy",
     image: "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?q=80&w=2070&auto=format&fit=crop",
     rating: 4.8,
     players: "89K"
-  },
-  {
-    id: 3,
-    title: "Astro Racers Pro",
-    category: "Action",
-    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop",
-    rating: 4.7,
-    players: "210K"
   }
 ];
 
@@ -50,17 +58,17 @@ const FeaturedGames: React.FC = () => {
             <div style={{ height: '220px', position: 'relative', overflow: 'hidden' }}>
               <img 
                 src={game.image} 
-                alt={game.title} 
+                alt={t(game.titleKey)} 
                 style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
                 className="game-img"
               />
               <div style={{ position: 'absolute', top: '1rem', left: '1rem', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', padding: '0.25rem 0.75rem', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary)' }}>
-                {game.category}
+                {t(game.categoryKey)}
               </div>
             </div>
             
             <div style={{ padding: '1.5rem' }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>{game.title}</h3>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '1rem' }}>{t(game.titleKey)}</h3>
               
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
