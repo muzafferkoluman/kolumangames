@@ -1,13 +1,13 @@
-import React from 'react';
 import { Star, Users, Flame } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import spaceWarImg from '../assets/space-war.png';
 
 const games = [
   {
     id: 1,
     titleKey: "games.space_war",
     categoryKey: "games.categories.action",
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?q=80&w=2074&auto=format&fit=crop",
+    image: spaceWarImg,
     rating: 4.9,
     players: "142K"
   },
