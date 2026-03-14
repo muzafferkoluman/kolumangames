@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Users, Flame } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const games = [
   {
@@ -21,7 +22,7 @@ const games = [
   {
     id: 3,
     title: "Astro Racers Pro",
-    category: "Racing",
+    category: "Action",
     image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop",
     rating: 4.7,
     players: "210K"
@@ -29,17 +30,18 @@ const games = [
 ];
 
 const FeaturedGames: React.FC = () => {
+  const { t } = useTranslation();
   return (
-    <section className="container" style={{ padding: '4rem 2rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3rem' }}>
+    <section className="container" style={{ padding: '1.5rem 2rem 4rem 2rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem' }}>
         <div>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <Flame color="var(--secondary)" fill="var(--secondary)" /> 
-            Trending <span className="text-gradient">Games</span>
+            {t('featured.title')}<span className="text-gradient">{t('featured.title_highlight')}</span>
           </h2>
-          <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>The most played games on Koluman Games this week.</p>
+          <p style={{ color: 'var(--text-muted)', marginTop: '0.5rem' }}>{t('featured.subtitle')}</p>
         </div>
-        <button className="btn btn-secondary">View All</button>
+        <button className="btn btn-secondary">{t('featured.viewAll')}</button>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem' }}>
@@ -67,11 +69,11 @@ const FeaturedGames: React.FC = () => {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                   <Users size={16} />
-                  <span>{game.players} Active</span>
+                  <span>{game.players} {t('featured.active')}</span>
                 </div>
               </div>
               
-              <button className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>Play Now</button>
+              <button className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>{t('featured.playNow')}</button>
             </div>
           </div>
         ))}
