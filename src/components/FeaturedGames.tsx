@@ -31,7 +31,7 @@ const games = [
     id: 4,
     titleKey: "games.quantum_chess",
     categoryKey: "games.categories.strategy",
-    image: "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1529697210530-8c2bb13c84ff?q=80&w=2070&auto=format&fit=crop",
     rating: 4.8,
     players: "89K"
   }
