@@ -11,7 +11,8 @@ const games = [
     categoryKey: "games.categories.action",
     image: spaceWarImg,
     rating: 4.9,
-    players: "142K"
+    players: "142K",
+    url: "/uzay-savasi/"
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const games = [
     categoryKey: "games.categories.sports",
     image: onlineFootballImg,
     rating: 4.8,
-    players: "285K"
+    players: "285K",
+    url: "/online-futbol/"
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const games = [
     categoryKey: "games.categories.action",
     image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
     rating: 4.9,
-    players: "125K"
+    players: "125K",
+    url: "#"
   }
 ];
 
@@ -75,7 +78,15 @@ const FeaturedGames: React.FC = () => {
                 </div>
               </div>
               
-              <button className="btn btn-primary" style={{ width: '100%', marginTop: '1.5rem' }}>{t('featured.playNow')}</button>
+              <a 
+                href={game.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ width: '100%', marginTop: '1.5rem', display: 'flex', justifyContent: 'center', textDecoration: 'none' }}
+              >
+                {t('featured.playNow')}
+              </a>
             </div>
           </div>
         ))}
