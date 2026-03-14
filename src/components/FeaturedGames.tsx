@@ -26,14 +26,6 @@ const games = [
     image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
     rating: 4.9,
     players: "125K"
-  },
-  {
-    id: 4,
-    titleKey: "games.quantum_chess",
-    categoryKey: "games.categories.strategy",
-    image: "https://images.unsplash.com/photo-1529697210530-8c2bb13c84ff?q=80&w=2070&auto=format&fit=crop",
-    rating: 4.8,
-    players: "89K"
   }
 ];
 
