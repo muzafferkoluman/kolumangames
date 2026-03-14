@@ -164,7 +164,7 @@ const de = {
     },
     games: {
       space_war: "Weltraumkrieg",
-      online_football: "Online-Fußball",
+      online_football: "Online-Fussball",
       neon_runner: "Neon Cyber Runner",
       quantum_chess: "Quantenschach",
       astro_racers: "Astro Racers Pro",
