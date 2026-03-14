@@ -12,7 +12,8 @@ const games = [
     image: spaceWarImg,
     rating: 4.9,
     players: "142K",
-    url: "/uzay-savasi/"
+    url: "/uzay-savasi/",
+    comingSoon: false
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const games = [
     image: onlineFootballImg,
     rating: 4.8,
     players: "285K",
-    url: "/online-futbol/"
+    url: "/online-futbol/",
+    comingSoon: true
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ const games = [
     image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
     rating: 4.9,
     players: "125K",
-    url: "#"
+    url: "#",
+    comingSoon: true
   }
 ];
 
@@ -51,17 +54,24 @@ const FeaturedGames: React.FC = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '2rem' }}>
         {games.map((game) => (
-          <div key={game.id} className="glass glass-card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+          <div key={game.id} className="glass glass-card" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column', opacity: game.comingSoon ? 0.75 : 1 }}>
             <div style={{ height: '220px', position: 'relative', overflow: 'hidden' }}>
               <img 
                 src={game.image} 
                 alt={t(game.titleKey)} 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease', filter: game.comingSoon ? 'grayscale(30%)' : 'none' }}
                 className="game-img"
               />
+              {/* Category badge */}
               <div style={{ position: 'absolute', top: '1rem', left: '1rem', background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', padding: '0.25rem 0.75rem', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 600, color: 'var(--primary)' }}>
                 {t(game.categoryKey)}
               </div>
+              {/* Coming Soon overlay badge */}
+              {game.comingSoon && (
+                <div style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'linear-gradient(135deg, var(--secondary), #ff6b6b)', padding: '0.25rem 0.75rem', borderRadius: '50px', fontSize: '0.75rem', fontWeight: 700, color: '#fff', boxShadow: '0 2px 12px rgba(254,1,154,0.4)' }}>
+                  {t('featured.comingSoon')}
+                </div>
+              )}
             </div>
             
             <div style={{ padding: '1.5rem' }}>
@@ -78,15 +88,21 @@ const FeaturedGames: React.FC = () => {
                 </div>
               </div>
               
-              <a 
-                href={game.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ width: '100%', marginTop: '1.5rem', display: 'flex', justifyContent: 'center', textDecoration: 'none' }}
-              >
-                {t('featured.playNow')}
-              </a>
+              {game.comingSoon ? (
+                <button disabled className="btn" style={{ width: '100%', marginTop: '1.5rem', background: 'rgba(255,255,255,0.05)', color: 'var(--text-muted)', border: '1px dashed rgba(255,255,255,0.15)', cursor: 'not-allowed' }}>
+                  {t('featured.comingSoon')}
+                </button>
+              ) : (
+                <a 
+                  href={game.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                  style={{ width: '100%', marginTop: '1.5rem', display: 'flex', justifyContent: 'center', textDecoration: 'none' }}
+                >
+                  {t('featured.playNow')}
+                </a>
+              )}
             </div>
           </div>
         ))}

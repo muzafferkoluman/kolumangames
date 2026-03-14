@@ -25,7 +25,8 @@ const en = {
       subtitle: "The most played games on Koluman Games this week.",
       viewAll: "View All",
       active: "Active",
-      playNow: "Play Now"
+      playNow: "Play Now",
+      comingSoon: "Coming Soon"
     },
     games: {
       space_war: "Space War",
@@ -68,7 +69,8 @@ const tr = {
       subtitle: "Koluman Games'te bu hafta en çok oynanan oyunlar.",
       viewAll: "Tümünü Gör",
       active: "Aktif",
-      playNow: "Hemen Oyna"
+      playNow: "Hemen Oyna",
+      comingSoon: "Yakında"
     },
     games: {
       space_war: "Uzay Savaşı",
@@ -111,7 +113,8 @@ const sv = {
       subtitle: "De mest spelade spelen på Koluman Games denna vecka.",
       viewAll: "Visa Alla",
       active: "Aktiva",
-      playNow: "Spela Nu"
+      playNow: "Spela Nu",
+      comingSoon: "Kommer Snart"
     },
     games: {
       space_war: "Rymdkrig",
@@ -154,7 +157,8 @@ const de = {
       subtitle: "Die meistgespielten Spiele auf Koluman Games diese Woche.",
       viewAll: "Alle Ansehen",
       active: "Aktiv",
-      playNow: "Jetzt Spielen"
+      playNow: "Jetzt Spielen",
+      comingSoon: "Demnachäst"
     },
     games: {
       space_war: "Weltraumkrieg",
