@@ -21,6 +21,11 @@ HangarManager.init();
 // Wait for assets before starting
 AssetManager.load().then(() => {
     console.log("Game assets ready.");
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => loadingScreen.remove(), 1000);
+    }
     requestAnimationFrame(gameLoop);
 });
 
@@ -48,6 +53,46 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+// Mobile Touch Controls
+let isTouching = false;
+window.addEventListener('touchstart', (e) => {
+    isTouching = true;
+    keys['Space'] = true; // Auto-shoot on touch
+    handleTouch(e);
+    if (!gameState.running) initGame();
+}, { passive: false });
+
+window.addEventListener('touchmove', (e) => {
+    handleTouch(e);
+}, { passive: false });
+
+window.addEventListener('touchend', () => {
+    isTouching = false;
+    keys['Space'] = false;
+    keys['ArrowLeft'] = false;
+    keys['ArrowRight'] = false;
+    keys['ArrowUp'] = false;
+    keys['ArrowDown'] = false;
+});
+
+function handleTouch(e) {
+    if (!player || !gameState.running) return;
+    const touch = e.touches[0];
+    const tx = touch.clientX;
+    const ty = touch.clientY;
+    
+    // Relative movement toward touch point
+    const dx = tx - player.x;
+    const dy = ty - player.y;
+    
+    keys['ArrowLeft'] = dx < -20;
+    keys['ArrowRight'] = dx > 20;
+    keys['ArrowUp'] = dy < -20;
+    keys['ArrowDown'] = dy > 20;
+    
+    e.preventDefault();
+}
 document.getElementById('restart-btn').addEventListener('click', () => {
     document.getElementById('game-over-screen').classList.add('hidden');
     initGame();
@@ -231,6 +276,9 @@ function shakeScreen(amount) {
 // Loop Vars
 let lastTime = 0;
 let score = 0;
+let combo = 0;
+let comboTimer = 0;
+const COMBO_TIMEOUT = 2000;
 
 // Setup Background
 for (let i = 0; i < 150; i++) stars.push(new Star(canvas.width, canvas.height));
@@ -372,6 +420,33 @@ function gameOver() {
 
 // Main Loop
 function gameLoop(timestamp) {
+    if (gameState.running) {
+        const comboContainer = document.getElementById('combo-container');
+        if (combo > 1) {
+            comboContainer.classList.remove('hidden');
+            document.getElementById('combo-multiplier').innerText = `X${1 + Math.floor(combo / 10)}`;
+            const fill = document.getElementById('combo-fill');
+            fill.style.width = `${(comboTimer / COMBO_TIMEOUT) * 100}%`;
+            
+            // Visual punch on combo increase
+            if (window._lastCombo !== combo) {
+                document.getElementById('combo-multiplier').style.animation = 'none';
+                void document.getElementById('combo-multiplier').offsetWidth;
+                document.getElementById('combo-multiplier').style.animation = 'pulse 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                window._lastCombo = combo;
+            }
+        } else {
+            comboContainer.classList.add('hidden');
+        }
+
+        if (comboTimer > 0) {
+            comboTimer -= (timestamp - (lastTime || timestamp));
+            if (comboTimer <= 0) {
+                combo = 0;
+                comboTimer = 0;
+            }
+        }
+    }
 
     if (!lastTime) lastTime = timestamp;
     let deltaTime = timestamp - lastTime;
@@ -485,6 +560,9 @@ function gameLoop(timestamp) {
             player.tookDamageThisWave = false; // Reset for next wave
         });
 
+        // Update Wave Indicator UI
+        document.getElementById('wave-indicator').innerText = `${LanguageManager.get('wave')}: ${WaveManager.currentWave}`;
+
         // Expose enemies for homing missiles
         window.enemiesList = enemies;
 
@@ -539,7 +617,9 @@ function gameLoop(timestamp) {
                         }
 
                         if (enemy.takeDamage(damage)) {
-                            score += 10 + (enemy.level * 5);
+                            score += (10 + (enemy.level * 5)) * (1 + Math.floor(combo / 10));
+                            combo++;
+                            comboTimer = COMBO_TIMEOUT;
                             document.getElementById('score').innerText = LanguageManager.get('score') + ': ' + score;
                             createExplosion(enemy.x, enemy.y, enemy.color);
 

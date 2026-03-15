@@ -13,6 +13,7 @@ export const LanguageManager = {
             'restart': 'TEKRAR OYNA',
             'hangar': 'HANGAR 🔧',
             'back_to_battle': 'SAVAŞA DÖN',
+            'back_home': 'ANASAYFA 🏠',
             'boss_coming': 'BOSS GELİYOR!',
             
             // Hangar Titles
@@ -73,6 +74,7 @@ export const LanguageManager = {
             'restart': 'PLAY AGAIN',
             'hangar': 'HANGAR 🔧',
             'back_to_battle': 'BACK TO BATTLE',
+            'back_home': 'MAIN PAGE 🏠',
             'boss_coming': 'BOSS IS COMING!',
             
             // Hangar Titles

@@ -33,7 +33,9 @@ export class Nebula {
             this.size, this.size, 0,
             this.size, this.size, this.size
         );
-        gradient.addColorStop(0, this.baseColor + this.opacity + ')');
+        gradient.addColorStop(0, this.baseColor + (this.opacity * 2.5) + ')');
+        gradient.addColorStop(0.3, this.baseColor + this.opacity + ')');
+        gradient.addColorStop(0.6, this.baseColor + (this.opacity * 0.5) + ')');
         gradient.addColorStop(1, this.baseColor + '0)');
 
         octx.fillStyle = gradient;

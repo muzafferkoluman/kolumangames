@@ -14,6 +14,14 @@
 
     <div id="ui-container">
         <div id="score">SKOR: 0</div>
+        <div id="wave-indicator">DALGA: 1</div>
+        <div id="combo-container" class="hidden">
+            <div id="combo-text">COMBO</div>
+            <div id="combo-multiplier">X1</div>
+            <div id="combo-bar">
+                <div id="combo-fill"></div>
+            </div>
+        </div>
         <div id="mute-btn">🔊</div>
         <div id="high-score"
             style="position: absolute; top: 10px; right: 20px; color: #ff0; font-family: 'Orbitron', sans-serif; font-size: 24px;">
@@ -25,14 +33,20 @@
                 <button class="lang-btn" data-lang="tr">TR</button>
                 <button class="lang-btn" data-lang="en">EN</button>
             </div>
-            <button id="start-hangar-btn" style="margin-top: 20px; border-color: #ff0; color: #ff0;" data-i18n="hangar">HANGAR 🔧</button>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                <button id="start-hangar-btn" style="border-color: #ff0; color: #ff0;" data-i18n="hangar">HANGAR 🔧</button>
+                <a href="https://games.koluman.se" class="ui-btn-link" data-i18n="back_home">ANASAYFA 🏠</a>
+            </div>
         </div>
         <div id="game-over-screen" class="hidden">
             <h1 data-i18n="game_over">OYUN BİTTİ</h1>
             <p><span data-i18n="final_score">Son Skor</span>: <span id="final-score">0</span></p>
-            <div style="display: flex; gap: 10px; justify-content: center;">
-                <button id="restart-btn" data-i18n="restart">TEKRAR OYNA</button>
-                <button id="end-hangar-btn" style="border-color: #f80; color: #f80;" data-i18n="hangar">HANGAR 🔧</button>
+            <div style="display: flex; gap: 10px; flex-direction: column; align-items: center;">
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button id="restart-btn" data-i18n="restart">TEKRAR OYNA</button>
+                    <button id="end-hangar-btn" style="border-color: #f80; color: #f80;" data-i18n="hangar">HANGAR 🔧</button>
+                </div>
+                <a href="https://games.koluman.se" class="ui-btn-link" style="margin-top: 10px; width: 100%;" data-i18n="back_home">ANASAYFA 🏠</a>
             </div>
         </div>
 
@@ -139,6 +153,10 @@
         <div id="mission-list"></div>
     </div>
 
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p>YÜKLENİYOR...</p>
+    </div>
     <script type="module" src="js/main.js"></script>
 </body>
 
