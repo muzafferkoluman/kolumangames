@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Koluman Games 🎮
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern, premium, and multi-language gaming platform built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+Visit the platform at: [games.koluman.se](https://games.koluman.se)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **OLED Dark Mode**: Stunning glassmorphism UI designed for high-end feel.
+- **Multi-language Support**: Fully localized in English, Turkish, Swedish, and German using `i18next`.
+- **Game Integration**: Seamlessly hosts independent web games (e.g., Space War).
+- **Responsive Design**: Optimized for desktops, tablets, and phones.
+- **CI/CD Built-in**: Automated FTP deployment via GitHub Actions.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **Styling**: Vanilla CSS (Modern custom properties & Glassmorphism)
+- **i18n**: i18next & react-i18next
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏁 Quick Start
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/muzafferkoluman/kolumangames.git
+   cd kolumangames
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 📦 Building for Production
+```bash
+npm run build
 ```
+The output will be in the `dist` folder.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚢 Deployment
+The project uses GitHub Actions for CI/CD. Any push to the `main` branch automatically:
+1. Builds the project.
+2. Deploys the `dist` folder to the FTP server specified in GitHub Secrets.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🤝 Contributing
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Developed with ❤️ by [muzafferkoluman](https://github.com/muzafferkoluman)
