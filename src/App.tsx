@@ -15,6 +15,7 @@ function App() {
       </main>
       <footer className="glass" style={{ marginTop: '4rem', padding: '2rem', textAlign: 'center', borderBottom: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: '0' }}>
         <p style={{ color: 'var(--text-muted)' }}>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
+        <a href="/privacy-policy.html" style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}>Privacy Policy</a>
       </footer>
     </div>
   );
