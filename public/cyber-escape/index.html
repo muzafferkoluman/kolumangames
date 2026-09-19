@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Cyber Escape | Koluman Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-wrapper">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- In-game HUD -->
+    <div id="hud" class="hidden">
+      <div class="hud-top">
+        <div class="hud-item score-box">
+          <span class="hud-label" data-i18n="score">SKOR</span>
+          <span id="score-val" class="hud-num">0</span>
+        </div>
+        <div class="hud-item distance-box">
+          <span class="hud-label" data-i18n="distance">MESAFE</span>
+          <span id="distance-val" class="hud-num">0m</span>
+        </div>
+        <div class="hud-item multiplier-box">
+          <span class="hud-label" data-i18n="multiplier">ÇARPAN</span>
+          <span id="multiplier-val" class="hud-num glow-pink">x1</span>
+        </div>
+        <div class="hud-right">
+          <div id="shield-display" class="shield-container">
+            <span class="shield-icon">🛡️</span>
+            <span id="shield-val">1</span>
+          </div>
+          <button id="mute-btn" class="hud-btn" title="Ses Aç/Kapat">🔊</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Overlay -->
+    <div id="start-screen" class="overlay">
+      <div class="overlay-card glass animate-pop">
+        <div class="badge glow-cyan" data-i18n="badge">NEON SİBER DÜNYA</div>
+        <h1 class="glitch-title">CYBER <span class="highlight">ESCAPE</span></h1>
+        <p class="subtitle" data-i18n="start_desc">Siber otoyolda bariyerleri aş, çekirdekleri topla ve güvenlik sisteminden kaç!</p>
+
+        <div class="controls-guide">
+          <div class="guide-item">
+            <span class="key">A / ←</span>
+            <span class="key">D / →</span>
+            <span class="guide-text" data-i18n="steer">Yönlendir</span>
+          </div>
+          <div class="guide-item">
+            <span class="key">SPACE / ↑</span>
+            <span class="guide-text" data-i18n="jump">Zıpla / Bariyer Aş</span>
+          </div>
+        </div>
+
+        <div class="lang-selector">
+          <button class="lang-btn active" data-lang="tr">TR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <button id="start-btn" class="btn btn-primary glow-btn" data-i18n="start_btn">SÜRÜŞÜ BAŞLAT</button>
+        
+        <div class="overlay-footer">
+          <a href="/" class="home-link" data-i18n="back_home">← Koluman Games'e Dön</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Over Overlay -->
+    <div id="game-over-screen" class="overlay hidden">
+      <div class="overlay-card glass animate-pop">
+        <h2 class="game-over-title glow-pink" data-i18n="game_over">BAĞLANTI KOPTU</h2>
+        <p class="subtitle" data-i18n="game_over_sub">Siber araç hasar gördü!</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-label" data-i18n="final_score">Skor</span>
+            <span id="end-score" class="stat-value glow-cyan">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label" data-i18n="final_distance">Mesafe</span>
+            <span id="end-distance" class="stat-value">0m</span>
+          </div>
+          <div class="stat-card full-width">
+            <span class="stat-label" data-i18n="high_score">En Yüksek Skor</span>
+            <span id="end-high-score" class="stat-value glow-gold">0</span>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button id="restart-btn" class="btn btn-primary glow-btn" data-i18n="restart_btn">TEKRAR DENE</button>
+          <a href="/" class="btn btn-secondary" data-i18n="back_home">Ana Sayfaya Dön</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Touch Controls -->
+    <div id="touch-controls" class="hidden">
+      <button id="touch-left" class="touch-btn">◀</button>
+      <button id="touch-jump" class="touch-btn jump-btn">▲</button>
+      <button id="touch-right" class="touch-btn">▶</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

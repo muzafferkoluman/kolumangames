@@ -34,6 +34,8 @@ const en = {
       valendor: "Valendor",
       valendor_description: "Build your kingdom, command your army, and fight for glory.",
       online_football: "Online Football",
+      cyber_escape: "Cyber Escape",
+      cyber_escape_description: "Navigate high-speed neon highways, dodge security barriers, and escape the grid.",
       categories: {
         action: "Action",
         strategy: "Strategy",
@@ -80,6 +82,8 @@ const tr = {
       valendor: "Valendor",
       valendor_description: "Krallığını kur, orduna komuta et ve zafer için savaş.",
       online_football: "Online Futbol",
+      cyber_escape: "Cyber Escape",
+      cyber_escape_description: "Yüksek hızlı neon otoyolda güvenlik bariyerlerini aş, çekirdekleri topla ve kaç!",
       categories: {
         action: "Aksiyon",
         strategy: "Strateji",
@@ -126,6 +130,8 @@ const sv = {
       valendor: "Valendor",
       valendor_description: "Bygg ditt kungarike, led din armé och kämpa för ära.",
       online_football: "Online Fotboll",
+      cyber_escape: "Cyber Escape",
+      cyber_escape_description: "Navigera i neonupplysta motorvägar, undvik säkerhetsbarriärer och fly systemet.",
       categories: {
         action: "Action",
         strategy: "Strategi",
@@ -172,6 +178,8 @@ const de = {
       valendor: "Valendor",
       valendor_description: "Baue dein Königreich, führe deine Armee und kämpfe um Ruhm.",
       online_football: "Online-Fussball",
+      cyber_escape: "Cyber Escape",
+      cyber_escape_description: "Rase über Neon-Highways, weiche Sicherheitsbarrieren aus und entkomme dem Raster.",
       categories: {
         action: "Action",
         strategy: "Strategie",

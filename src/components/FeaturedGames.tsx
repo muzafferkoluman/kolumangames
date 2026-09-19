@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import spaceWarImg from '../assets/space-war.png';
 import onlineFootballImg from '../assets/online-football.png';
 import valendorImg from '../assets/valendor.png';
+import cyberEscapeImg from '../assets/cyber-escape.jpg';
 
 const games = [
   {
@@ -30,6 +31,17 @@ const games = [
   },
   {
     id: 2,
+    titleKey: "games.cyber_escape",
+    categoryKey: "games.categories.action",
+    descriptionKey: "games.cyber_escape_description",
+    image: cyberEscapeImg,
+    rating: 4.9,
+    players: "98K",
+    url: "/cyber-escape/",
+    comingSoon: false
+  },
+  {
+    id: 3,
     titleKey: "games.online_football",
     categoryKey: "games.categories.sports",
     image: onlineFootballImg,
