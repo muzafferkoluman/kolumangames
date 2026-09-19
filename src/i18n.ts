@@ -26,10 +26,13 @@ const en = {
       viewAll: "View All",
       active: "Active",
       playNow: "Play Now",
-      comingSoon: "Coming Soon"
+      comingSoon: "Coming Soon",
+      newRelease: "Featured release"
     },
     games: {
       space_war: "Space War",
+      valendor: "Valendor",
+      valendor_description: "Build your kingdom, command your army, and fight for glory.",
       online_football: "Online Football",
       neon_runner: "Neon Cyber Runner",
       categories: {
@@ -70,10 +73,13 @@ const tr = {
       viewAll: "Tümünü Gör",
       active: "Aktif",
       playNow: "Hemen Oyna",
-      comingSoon: "Yakında"
+      comingSoon: "Yakında",
+      newRelease: "Öne çıkan sürüm"
     },
     games: {
       space_war: "Uzay Savaşı",
+      valendor: "Valendor",
+      valendor_description: "Krallığını kur, orduna komuta et ve zafer için savaş.",
       online_football: "Online Futbol",
       neon_runner: "Neon Cyber Runner",
       categories: {
@@ -114,10 +120,13 @@ const sv = {
       viewAll: "Visa Alla",
       active: "Aktiva",
       playNow: "Spela Nu",
-      comingSoon: "Kommer Snart"
+      comingSoon: "Kommer Snart",
+      newRelease: "Utvald release"
     },
     games: {
       space_war: "Rymdkrig",
+      valendor: "Valendor",
+      valendor_description: "Bygg ditt kungarike, led din armé och kämpa för ära.",
       online_football: "Online Fotboll",
       neon_runner: "Neon Cyber Runner",
       categories: {
@@ -158,10 +167,13 @@ const de = {
       viewAll: "Alle Ansehen",
       active: "Aktiv",
       playNow: "Jetzt Spielen",
-      comingSoon: "Demnachäst"
+      comingSoon: "Demnachäst",
+      newRelease: "Ausgewählte Veröffentlichung"
     },
     games: {
       space_war: "Weltraumkrieg",
+      valendor: "Valendor",
+      valendor_description: "Baue dein Königreich, führe deine Armee und kämpfe um Ruhm.",
       online_football: "Online-Fussball",
       neon_runner: "Neon Cyber Runner",
       categories: {
