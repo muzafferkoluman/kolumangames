@@ -37,16 +37,6 @@ const games = [
     players: "285K",
     url: "/online-futbol/",
     comingSoon: true
-  },
-  {
-    id: 3,
-    titleKey: "games.neon_runner",
-    categoryKey: "games.categories.action",
-    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=2070&auto=format&fit=crop",
-    rating: 4.9,
-    players: "125K",
-    url: "#",
-    comingSoon: true
   }
 ];
 

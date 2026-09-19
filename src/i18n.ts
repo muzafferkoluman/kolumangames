@@ -34,7 +34,6 @@ const en = {
       valendor: "Valendor",
       valendor_description: "Build your kingdom, command your army, and fight for glory.",
       online_football: "Online Football",
-      neon_runner: "Neon Cyber Runner",
       categories: {
         action: "Action",
         strategy: "Strategy",
@@ -81,7 +80,6 @@ const tr = {
       valendor: "Valendor",
       valendor_description: "Krallığını kur, orduna komuta et ve zafer için savaş.",
       online_football: "Online Futbol",
-      neon_runner: "Neon Cyber Runner",
       categories: {
         action: "Aksiyon",
         strategy: "Strateji",
@@ -128,7 +126,6 @@ const sv = {
       valendor: "Valendor",
       valendor_description: "Bygg ditt kungarike, led din armé och kämpa för ära.",
       online_football: "Online Fotboll",
-      neon_runner: "Neon Cyber Runner",
       categories: {
         action: "Action",
         strategy: "Strategi",
@@ -175,7 +172,6 @@ const de = {
       valendor: "Valendor",
       valendor_description: "Baue dein Königreich, führe deine Armee und kämpfe um Ruhm.",
       online_football: "Online-Fussball",
-      neon_runner: "Neon Cyber Runner",
       categories: {
         action: "Action",
         strategy: "Strategie",
