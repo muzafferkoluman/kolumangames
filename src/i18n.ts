@@ -31,7 +31,7 @@ const en = {
     },
     games: {
       space_war: "Space War",
-      space_war_description: "Battle enemy fleets in deep space, dodge asteroid storms, and defend the galaxy.",
+      space_war_description: "Developed by my 14-year-old brother! Battle enemy fleets in deep space, dodge asteroid storms, and defend the galaxy.",
       valendor: "Valendor",
       valendor_description: "Build your kingdom, command your army, and fight for glory.",
       online_football: "Online Football",
@@ -81,7 +81,7 @@ const tr = {
     },
     games: {
       space_war: "Uzay Savaşı",
-      space_war_description: "Derin uzayda düşman filolarına karşı savaşın, asteroit fırtınalarını aşın ve galaksiyi savunun.",
+      space_war_description: "14 yaşındaki kardeşim tarafından geliştirildi! Derin uzayda düşman filolarıyla savaşın, asteroitleri aşın ve galaksiyi savunun.",
       valendor: "Valendor",
       valendor_description: "Krallığını kur, orduna komuta et ve zafer için savaş.",
       online_football: "Online Futbol",
@@ -131,7 +131,7 @@ const sv = {
     },
     games: {
       space_war: "Rymdkrig",
-      space_war_description: "Kämpa mot fiendeflottor i djupa rymden, undvik asteroidstormar och försvara galaxen.",
+      space_war_description: "Utvecklat av min 14-åriga bror! Kämpa mot fientliga flottor i djupa rymden, undvik asteroider och försvara galaxen.",
       valendor: "Valendor",
       valendor_description: "Bygg ditt kungarike, led din armé och kämpa för ära.",
       online_football: "Online Fotboll",
@@ -181,7 +181,7 @@ const de = {
     },
     games: {
       space_war: "Weltraumkrieg",
-      space_war_description: "Kämpfe gegen feindliche Flotten in den Weiten des Alls und verteidige die Galaxie.",
+      space_war_description: "Entwickelt von meinem 14-jährigen Bruder! Kämpfe gegen feindliche Flotten im All, weiche Asteroiden aus und verteidige die Galaxie.",
       valendor: "Valendor",
       valendor_description: "Baue dein Königreich, führe deine Armee und kämpfe um Ruhm.",
       online_football: "Online-Fussball",
