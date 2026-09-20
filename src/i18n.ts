@@ -31,9 +31,11 @@ const en = {
     },
     games: {
       space_war: "Space War",
+      space_war_description: "Battle enemy fleets in deep space, dodge asteroid storms, and defend the galaxy.",
       valendor: "Valendor",
       valendor_description: "Build your kingdom, command your army, and fight for glory.",
       online_football: "Online Football",
+      online_football_description: "Showcase your football skills against online opponents and rise to the championship.",
       cyber_escape: "Cyber Escape",
       cyber_escape_description: "Navigate high-speed neon highways, dodge security barriers, and escape the grid.",
       categories: {
@@ -79,9 +81,11 @@ const tr = {
     },
     games: {
       space_war: "Uzay Savaşı",
+      space_war_description: "Derin uzayda düşman filolarına karşı savaşın, asteroit fırtınalarını aşın ve galaksiyi savunun.",
       valendor: "Valendor",
       valendor_description: "Krallığını kur, orduna komuta et ve zafer için savaş.",
       online_football: "Online Futbol",
+      online_football_description: "Çevrimiçi rakiplere karşı futbol yeteneklerinizi sergileyin ve şampiyonluğa ulaşın.",
       cyber_escape: "Cyber Escape",
       cyber_escape_description: "Yüksek hızlı neon otoyolda güvenlik bariyerlerini aş, çekirdekleri topla ve kaç!",
       categories: {
@@ -127,9 +131,11 @@ const sv = {
     },
     games: {
       space_war: "Rymdkrig",
+      space_war_description: "Kämpa mot fiendeflottor i djupa rymden, undvik asteroidstormar och försvara galaxen.",
       valendor: "Valendor",
       valendor_description: "Bygg ditt kungarike, led din armé och kämpa för ära.",
       online_football: "Online Fotboll",
+      online_football_description: "Visa dina fotbollskunskaper mot online-motståndare och nå mästerskapet.",
       cyber_escape: "Cyber Escape",
       cyber_escape_description: "Navigera i neonupplysta motorvägar, undvik säkerhetsbarriärer och fly systemet.",
       categories: {
@@ -175,9 +181,11 @@ const de = {
     },
     games: {
       space_war: "Weltraumkrieg",
+      space_war_description: "Kämpfe gegen feindliche Flotten in den Weiten des Alls und verteidige die Galaxie.",
       valendor: "Valendor",
       valendor_description: "Baue dein Königreich, führe deine Armee und kämpfe um Ruhm.",
       online_football: "Online-Fussball",
+      online_football_description: "Zeige dein fußballerisches Können gegen Online-Gegner und hol dir den Meistertitel.",
       cyber_escape: "Cyber Escape",
       cyber_escape_description: "Rase über Neon-Highways, weiche Sicherheitsbarrieren aus und entkomme dem Raster.",
       categories: {
