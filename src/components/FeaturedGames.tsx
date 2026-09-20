@@ -57,7 +57,7 @@ const games = [
 const FeaturedGames: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <section className="container" style={{ padding: '1.5rem 2rem 4rem 2rem' }}>
+    <section id="games" className="container" style={{ padding: '1.5rem 2rem 4rem 2rem', scrollMarginTop: '5rem' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '2.5rem' }}>
         <div>
           <h2 style={{ fontSize: '2.5rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
